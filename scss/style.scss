@@ -1,0 +1,92 @@
+//variables
+$black: #2c363f;
+$white: #fefefe;
+$green: #5dab92;
+/*モバイルファーストで書いてみたが意外と分かりやすい*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  // width: 100%;
+
+  body {
+    width: 90%;
+    margin: 0 auto;
+
+    .header {
+      margin: 20% auto;
+      font-size: 2rem;
+    }
+
+    .flex_left {
+      // width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .flex_right {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      img {
+        max-width: 48%;
+        margin-bottom: 2%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 62.5%; /*ベースを16px⇒10pxに出来た*/
+
+    body {
+      max-width: 1200px;
+      // width: 90%;
+      // margin: 0 auto;
+      // background-color: red;
+      .header {
+        margin: 5% auto;
+        // font-size: 2rem;
+      }
+      .visual_wrapper {
+        display: flex;
+        background-color: #000;
+
+        .flex_left {
+          width: 40%;
+          align-items: center;
+          // background-color: red;
+          flex-wrap: wrap;
+          img {
+            // width: 100%;
+            max-width: 100%;
+            margin-top: 2px;
+          }
+        }
+
+        .flex_right {
+          width: 60%;
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          margin: 0 auto;
+          justify-content: center;
+
+          img {
+            width: 32%;
+            margin: 2px;
+            // width: calc(100% / 3);
+            // margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
